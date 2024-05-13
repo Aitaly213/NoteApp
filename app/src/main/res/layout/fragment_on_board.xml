@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.onBoard.OnBoardFragment">
 
    <androidx.viewpager2.widget.ViewPager2
@@ -22,5 +23,23 @@
        android:textColor="#D88B02"
        android:visibility="visible"
        android:textSize="15sp" />
+
+   <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+       android:id="@+id/dots"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+
+       android:layout_marginTop="45dp"
+       app:dampingRatio="0.1"
+       app:dotsSize="16dp"
+       app:dotsStrokeColor="#C4C4C4"
+       app:dotsColor="#D88B02"
+       android:layout_gravity="center|bottom"
+       android:layout_marginBottom="40dp"
+
+
+
+       />
+
 
 </FrameLayout>

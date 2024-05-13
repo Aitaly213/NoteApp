@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isInvisible
 import androidx.viewpager2.widget.ViewPager2
-import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentOnBoardBinding
 import com.example.noteapp.ui.adapter.OnBoardViewPagerAdapter
 
@@ -38,6 +36,8 @@ class OnBoardFragment : Fragment() {
 
     private fun init() {
         binding.viewPager2.adapter= OnBoardViewPagerAdapter(this@OnBoardFragment)
+
+
     }
 
 
@@ -59,6 +59,10 @@ class OnBoardFragment : Fragment() {
             }
 
         }
+
+        val adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
+        binding.viewPager2.adapter = adapter
+        binding.dots.attachTo(binding.viewPager2)
 
     }
 }
