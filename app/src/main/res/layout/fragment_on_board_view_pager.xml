@@ -33,19 +33,7 @@
         android:layout_marginBottom="100dp"
         />
 
-    <TextView
-        android:id="@+id/startTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/onTxt"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="Начать работу"
-        android:textColor="#8E8B8B"
-        android:visibility="visible"
-        android:textSize="16sp" />
+
 
 
 
