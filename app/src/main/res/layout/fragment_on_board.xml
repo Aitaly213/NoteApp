@@ -24,20 +24,28 @@
        android:visibility="visible"
        android:textSize="15sp" />
 
+   <TextView
+       android:id="@+id/startTxt"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="bottom|center"
+       android:fontFamily="@font/poppins_bold"
+       android:text="Начать работу"
+       android:textColor="#8E8B8B"
+       android:visibility="visible"
+       android:textSize="16sp"
+       android:layout_marginBottom="100dp"/>
+
    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
        android:id="@+id/dots"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-
-       android:layout_marginTop="45dp"
        app:dampingRatio="0.1"
        app:dotsSize="16dp"
        app:dotsStrokeColor="#C4C4C4"
        app:dotsColor="#D88B02"
        android:layout_gravity="center|bottom"
        android:layout_marginBottom="40dp"
-
-
 
        />
 

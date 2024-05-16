@@ -51,9 +51,10 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation ("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation ("androidx.navigation:navigation-ui-ktx:2.7.7")
-
+    //Animation
     implementation ("com.airbnb.android:lottie:3.4.0")
 
+    //dots
     implementation("com.tbuonomo:dotsindicator:5.0")
 
 

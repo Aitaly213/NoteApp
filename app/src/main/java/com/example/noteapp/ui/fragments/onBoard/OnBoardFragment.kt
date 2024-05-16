@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentOnBoardBinding
 import com.example.noteapp.ui.adapter.OnBoardViewPagerAdapter
 
@@ -57,12 +59,28 @@ class OnBoardFragment : Fragment() {
             if (currentItem < 3){
                 setCurrentItem(currentItem + 2 , true)
             }
-
         }
+
+        registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                if (position == 2 ){
+                    binding.startTxt.visibility = View.VISIBLE
+                }else{
+                    binding.startTxt.visibility = View.INVISIBLE
+                }
+            }
+        })
+
 
         val adapter = OnBoardViewPagerAdapter(this@OnBoardFragment)
         binding.viewPager2.adapter = adapter
         binding.dots.attachTo(binding.viewPager2)
+
+
+        binding.startTxt.setOnClickListener {
+            findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
+        }
 
     }
 }
