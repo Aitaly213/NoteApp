@@ -10,6 +10,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.noteapp.R
 import com.example.noteapp.databinding.FragmentOnBoardBinding
 import com.example.noteapp.ui.adapter.OnBoardViewPagerAdapter
+import com.example.noteapp.utils.PreferenceHelper
 
 
 class OnBoardFragment : Fragment() {
@@ -33,6 +34,8 @@ class OnBoardFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         init()
         setupListener()
+
+
     }
 
 
@@ -78,8 +81,16 @@ class OnBoardFragment : Fragment() {
         binding.dots.attachTo(binding.viewPager2)
 
 
+        val preferenceHelper = PreferenceHelper()
+        preferenceHelper.unit(requireContext())
+
+        if (preferenceHelper.onBoardShown){
+            findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
+        }
         binding.startTxt.setOnClickListener {
             findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
+
+            preferenceHelper.onBoardShown = true
         }
 
     }

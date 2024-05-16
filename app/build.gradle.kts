@@ -57,5 +57,7 @@ dependencies {
     //dots
     implementation("com.tbuonomo:dotsindicator:5.0")
 
+    implementation("androidx.cardview:cardview:1.0.0")
+
 
 }
