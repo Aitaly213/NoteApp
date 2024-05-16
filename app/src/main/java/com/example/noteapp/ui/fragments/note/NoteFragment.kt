@@ -20,6 +20,7 @@ class NoteFragment : Fragment() {
     private lateinit var binding: FragmentNoteBinding
 
     private val noteAdapter= NoteAdapter()
+
     private val list: ArrayList<NoteModel> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,8 +54,8 @@ class NoteFragment : Fragment() {
 
     private fun setupListeners() = with(binding) {
 
-//        val preferenceHelper = PreferenceHelper()
-//        preferenceHelper.unit(requireContext())
+        val preferenceHelper = PreferenceHelper()
+        preferenceHelper.unit(requireContext())
 
 //        saveBtn.setOnClickListener {
 //            val et = etText.text.toString()
@@ -63,8 +64,9 @@ class NoteFragment : Fragment() {
 //
 //            saveText.text = et
 //        }
-//
-//        saveText.text = preferenceHelper.title
+//       saveText.text = preferenceHelper.title
+
+
         btnAdd.setOnClickListener {
             findNavController().navigate(R.id.action_noteFragment_to_detailNoteFragment)
         }
