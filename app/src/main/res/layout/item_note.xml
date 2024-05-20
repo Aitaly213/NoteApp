@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="60dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_marginVertical="10dp"
@@ -20,15 +20,29 @@
 
         <TextView
 
-            android:id="@+id/item_txt"
-            android:textColor="@color/white"
+            android:id="@+id/item_title"
+            android:textColor="#B1B1B1"
             tools:text="sdcvsdddf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_margin="15dp"/>
+            android:fontFamily="@font/poppins_semibold"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+
+            android:id="@+id/item_description"
+            android:textColor="#B1B1B1"
+            tools:text="sdcvsdddf"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:layout_gravity="start|bottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="11dp"/>
 
     </androidx.cardview.widget.CardView>
 

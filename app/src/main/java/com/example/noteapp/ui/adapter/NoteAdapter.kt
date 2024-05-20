@@ -11,7 +11,8 @@ import com.example.noteapp.databinding.ItemNoteBinding
 class NoteAdapter:ListAdapter<NoteModel , NoteAdapter.ViewHolder>(DiffUtilCallBack()) {
     class ViewHolder(private val binding: ItemNoteBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: NoteModel) {
-            binding.itemTxt.text = item.title
+            binding.itemTitle.text = item.title
+            binding.itemDescription.text = item.description
         }
     }
 
@@ -31,6 +32,7 @@ class DiffUtilCallBack: DiffUtil.ItemCallback<NoteModel>(){
     }
 
     override fun areContentsTheSame(oldItem: NoteModel, newItem: NoteModel): Boolean {
-        return oldItem.title == newItem.title
+        return oldItem.id == newItem.id
+
     }
 }
