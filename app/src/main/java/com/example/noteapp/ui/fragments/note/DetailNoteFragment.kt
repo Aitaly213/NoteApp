@@ -11,6 +11,10 @@ import com.example.noteapp.R
 import com.example.noteapp.data.extension.setBackStackData
 import com.example.noteapp.data.models.NoteModel
 import com.example.noteapp.databinding.FragmentDetailNoteBinding
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 
 class DetailNoteFragment : Fragment() {
@@ -34,13 +38,25 @@ class DetailNoteFragment : Fragment() {
 
     private fun setupListeners() {
 
+        val date = SimpleDateFormat("dd MMMM", Locale("ru")).format(Date())
+        val time = SimpleDateFormat("HH:mm", Locale.getDefault()).format(Date())
+
+        binding.tvTimeMonth.text = date.toString()
+        binding.tvTimeHours.text = time.toString()
+
         binding.btnAddText.setOnClickListener {
             val etTitle= binding.etTitle.text.toString()
             val etDesc= binding.etDescription.text.toString()
 
-            App().getInstance()?.noteDao()?.insertNote(NoteModel(etTitle,etDesc))
+
+            App().getInstance()?.noteDao()?.insertNote(NoteModel(etTitle,etDesc, date, time))
             findNavController().navigateUp()
         }
+
+        binding.ivBack.setOnClickListener {
+            findNavController().navigateUp()
+        }
+
     }
 
 

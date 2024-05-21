@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragments.note.DetailNoteFragment"
+    android:background="@color/black"
 
     >
 
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/ic_back"
+        />
+
+    <TextView
+        android:id="@+id/tv_time_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_back"
+        tools:text="30 maz"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        />
+
+    <TextView
+        android:id="@+id/tv_time_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_time_month"
+        tools:text="30 maz"
+        android:layout_margin="20dp"
+        android:textSize="16sp"
+        android:textColor="#B1B1B1"
+        android:fontFamily="@font/poppins_bold"
+        />
 
     <EditText
         android:id="@+id/et_title"
@@ -14,8 +52,13 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:textSize="26sp"
-        android:textColor="@color/white"
+        android:textColor="#B1B1B1"
         tools:text="fdss"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_month"
+        android:layout_margin="20dp"
+
+
         />
 
     <EditText
@@ -24,18 +67,31 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:textSize="26sp"
-        android:textColor="@color/white"
+        android:textColor="#B1B1B1"
         tools:text="fdss"
 
-        android:layout_marginTop="50dp"
+        android:layout_margin="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_title"
         />
 
-    <Button
-        android:text="Добавить"
+    <TextView
         android:id="@+id/btn_add_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Готово"
+        android:textColor="#D88B02"
+        android:textSize="15sp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins_bold"
         />
 
-</FrameLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
