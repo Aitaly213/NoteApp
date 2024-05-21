@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.note.DetailNoteFragment"
-    android:paddingHorizontal="16dp"
-    android:orientation="vertical"
-    android:gravity="center"
+
     >
 
 
     <EditText
-        android:id="@+id/et_add"
+        android:id="@+id/et_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="text"
@@ -20,12 +18,24 @@
         tools:text="fdss"
         />
 
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textSize="26sp"
+        android:textColor="@color/white"
+        tools:text="fdss"
+
+        android:layout_marginTop="50dp"
+        />
+
     <Button
         android:text="Добавить"
         android:id="@+id/btn_add_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
         />
 
-</LinearLayout>
+</FrameLayout>

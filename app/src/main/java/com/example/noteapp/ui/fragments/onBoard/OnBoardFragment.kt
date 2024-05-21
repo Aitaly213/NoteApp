@@ -87,6 +87,7 @@ class OnBoardFragment : Fragment() {
         if (preferenceHelper.onBoardShown){
             findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
         }
+
         binding.startTxt.setOnClickListener {
             findNavController().navigate(R.id.action_onBoardFragment_to_noteFragment)
 
