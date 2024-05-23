@@ -61,6 +61,7 @@
           android:textColorHint="#505050"
           android:drawableLeft="@drawable/ic_lupa"
           android:paddingLeft="18dp"
+          android:drawableTintMode="src_over"
           />
 
    </androidx.cardview.widget.CardView>
@@ -71,7 +72,7 @@
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        app:layout_constraintTop_toBottomOf="@+id/cv_et"
-
+       android:layout_marginTop="12dp"
 
        />
 
