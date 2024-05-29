@@ -64,14 +64,11 @@ class NoteFragment : Fragment(),OnClickItem {
 
         btnChangeLayout.setOnClickListener {
             isGridLayout = !isGridLayout
-
             val layoutManager = if(isGridLayout){
                 GridLayoutManager(requireContext(),2)
-
             }else{
                 LinearLayoutManager(requireContext())
             }
-
             binding.rvNote.layoutManager = layoutManager
         }
 
